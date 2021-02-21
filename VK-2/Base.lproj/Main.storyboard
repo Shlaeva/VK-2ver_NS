@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BHL-55-vjV">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -12,7 +12,7 @@
         <!--Login Form View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginFormViewController" customModule="VK_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginFormVC" id="BYZ-38-t0r" customClass="LoginFormViewController" customModule="VK_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,6 +111,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="500.00000000000006" y="-66.294642857142861"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="fyM-6Q-Thz">
+            <objects>
+                <viewController id="BHL-55-vjV" customClass="WKWebViewController" customModule="VK_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JyB-OD-prL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naf-sh-S2N">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cO7-Qf-ONt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="naf-sh-S2N" firstAttribute="leading" secondItem="cO7-Qf-ONt" secondAttribute="leading" id="Jpa-KP-rUb"/>
+                            <constraint firstItem="cO7-Qf-ONt" firstAttribute="trailing" secondItem="naf-sh-S2N" secondAttribute="trailing" id="TDo-By-PSU"/>
+                            <constraint firstItem="naf-sh-S2N" firstAttribute="top" secondItem="cO7-Qf-ONt" secondAttribute="top" id="idU-un-cEN"/>
+                            <constraint firstItem="cO7-Qf-ONt" firstAttribute="bottom" secondItem="naf-sh-S2N" secondAttribute="bottom" id="mdT-Z6-z8K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="naf-sh-S2N" id="1vh-hi-Ndk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hvu-6g-GP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342" y="-67"/>
         </scene>
         <!--My Group Table View Controller-->
         <scene sceneID="1hn-le-jRI">
@@ -423,7 +457,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="XWz-uk-6pi">
             <objects>
-                <tabBarController id="0xO-Nz-cd7" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="UITabBarController" id="0xO-Nz-cd7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WRO-MQ-R2r"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3sR-BK-Za8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -449,7 +483,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SUJ-iT-cwF">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -470,7 +503,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="isL-Cg-bk6">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -520,7 +552,6 @@
                     <tabBarItem key="tabBarItem" title="News" image="doc.richtext.ar" catalog="system" id="Tdr-5V-JNC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nfc-zw-vP2">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

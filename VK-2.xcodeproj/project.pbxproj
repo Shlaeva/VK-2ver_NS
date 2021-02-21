@@ -18,6 +18,8 @@
 		E3392CA825868633000AE6C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3392CA725868633000AE6C3 /* User.swift */; };
 		E3392CAB25868640000AE6C3 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3392CAA25868640000AE6C3 /* Group.swift */; };
 		E3392CB525900FE4000AE6C3 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3392CB425900FE4000AE6C3 /* CustomImageView.swift */; };
+		E346E97D25DE6F210036BAC4 /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E346E97C25DE6F210036BAC4 /* WKWebViewController.swift */; };
+		E346E98925DECC1E0036BAC4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E346E98825DECC1E0036BAC4 /* NetworkManager.swift */; };
 		E34E18D82597F6220019C689 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E18D72597F6220019C689 /* LikeControl.swift */; };
 		E3697186258157590056312A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3697185258157590056312A /* AppDelegate.swift */; };
 		E3697188258157590056312A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3697187258157590056312A /* SceneDelegate.swift */; };
@@ -50,6 +52,8 @@
 		E3392CA725868633000AE6C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3392CAA25868640000AE6C3 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		E3392CB425900FE4000AE6C3 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		E346E97C25DE6F210036BAC4 /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		E346E98825DECC1E0036BAC4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E34E18D72597F6220019C689 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		E3697182258157590056312A /* VK-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3697185258157590056312A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,16 @@
 			path = "Custom components";
 			sourceTree = "<group>";
 		};
+		E346E98225DECA9E0036BAC4 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				E37229B725D3D86900DD1B7C /* Session.swift */,
+				E346E98825DECC1E0036BAC4 /* NetworkManager.swift */,
+				E346E97C25DE6F210036BAC4 /* WKWebViewController.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 		E3697179258157590056312A = {
 			isa = PBXGroup;
 			children = (
@@ -162,14 +176,14 @@
 		E3697184258157590056312A /* VK-2 */ = {
 			isa = PBXGroup;
 			children = (
+				E369718B258157590056312A /* Main.storyboard */,
 				E3392CB225900F98000AE6C3 /* Custom components */,
 				E3697185258157590056312A /* AppDelegate.swift */,
 				E3392CA62586861D000AE6C3 /* Model */,
 				E3697187258157590056312A /* SceneDelegate.swift */,
 				E3722977259ECD4A00DD1B7C /* News */,
 				E369719A25815AC10056312A /* LoginFormViewController.swift */,
-				E369718B258157590056312A /* Main.storyboard */,
-				E37229B725D3D86900DD1B7C /* Session.swift */,
+				E346E98225DECA9E0036BAC4 /* NetworkManager */,
 				E3392C8C25844928000AE6C3 /* Pictures */,
 				E3392C86258448BA000AE6C3 /* Friends */,
 				E3392C812584484A000AE6C3 /* GroupSearch */,
@@ -263,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E346E98925DECC1E0036BAC4 /* NetworkManager.swift in Sources */,
 				E3392CA825868633000AE6C3 /* User.swift in Sources */,
 				E369719B25815AC10056312A /* LoginFormViewController.swift in Sources */,
 				E34E18D82597F6220019C689 /* LikeControl.swift in Sources */,
@@ -272,6 +287,7 @@
 				E372296B259BE68C00DD1B7C /* CustomHeader.swift in Sources */,
 				E3392C9B25865BBF000AE6C3 /* PicturesCell.swift in Sources */,
 				E3392C8E2584494B000AE6C3 /* PicturesCollectionViewController.swift in Sources */,
+				E346E97D25DE6F210036BAC4 /* WKWebViewController.swift in Sources */,
 				E3392CAB25868640000AE6C3 /* Group.swift in Sources */,
 				E37229B825D3D86900DD1B7C /* Session.swift in Sources */,
 				E3392CA025866A0E000AE6C3 /* FriendsCell.swift in Sources */,

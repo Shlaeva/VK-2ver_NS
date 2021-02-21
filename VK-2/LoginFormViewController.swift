@@ -15,12 +15,28 @@ class LoginFormViewController: UIViewController {
     let login = "admin"
     let password = "123"
     
+    
+    let token = Session.shared.token
+    
+  
+    
+    
     @IBAction func signInButton(_ sender: Any) {
         if loginInput.text! == login && passwordInput.text! == password {
             print("Authorization succeeded")
         } else {
             print("Authorization unsucceeded")
         }
+        
+        
+       
+
+        NetworkManager.shared.getFriends(token: token)
+        NetworkManager.shared.getFoto(token: token, owner_id: "610174587")
+        NetworkManager.shared.getGroups(token: token)
+        NetworkManager.shared.searchGroups(token: token, q: "ios")
+       
+        
         
     }
  
@@ -47,9 +63,9 @@ class LoginFormViewController: UIViewController {
         
 
         
-        loadingView1 = UIView(frame: CGRect(x: self.view.bounds.width / 2 - 40, y: 600, width: 20, height: 20))
-        loadingView2 = UIView(frame: CGRect(x: self.view.bounds.width / 2 - 10, y: 600, width: 20, height: 20))
-        loadingView3 = UIView(frame: CGRect(x: self.view.bounds.width / 2 + 20, y: 600, width: 20, height: 20))
+        loadingView1 = UIView(frame: CGRect(x: self.view.bounds.width / 2 - 40, y: self.view.bounds.height * 0.8, width: 20, height: 20))
+        loadingView2 = UIView(frame: CGRect(x: self.view.bounds.width / 2 - 10, y: self.view.bounds.height * 0.8, width: 20, height: 20))
+        loadingView3 = UIView(frame: CGRect(x: self.view.bounds.width / 2 + 20, y: self.view.bounds.height * 0.8, width: 20, height: 20))
         
         
         loadingView1.clipsToBounds = true
